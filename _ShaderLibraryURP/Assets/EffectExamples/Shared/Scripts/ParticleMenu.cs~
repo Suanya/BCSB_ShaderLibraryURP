@@ -25,10 +25,8 @@ public class ParticleMenu : MonoBehaviour {
 	public Text description;
 	public Text navigationDetails;
 
-    public AudioSource clickSound;
-
-    // setting up the first menu item and resetting the currentIndex to ensure it's at zero
-    void Start()
+	// setting up the first menu item and resetting the currentIndex to ensure it's at zero
+	void Start()
 	{
 		Navigate (0);
 		currentIndex = 0;
@@ -57,9 +55,4 @@ public class ParticleMenu : MonoBehaviour {
 		navigationDetails.text = "" + (currentIndex+1) + " out of " + particleSystems.Length.ToString();
 
 	}
-
-    public void ClickSound()
-    {
-        clickSound.Play();
-    }
 }

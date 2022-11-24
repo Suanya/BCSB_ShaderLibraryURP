@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7850950782890663617
+--- !u!114 &-5039224192595501304
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: _VertexPosition3
-  m_Shader: {fileID: -6465566751694194690, guid: cb38dc42262714d96b5ae26ca5bfe730,
+  m_Name: _VertexBlowUp
+  m_Shader: {fileID: -6465566751694194690, guid: 1ca9822e321f34f1e9150d6560101c5c,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -48,10 +48,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_7be3f07934394fb19011eff8d36a13e0: 2
-    - Vector1_8067d136259b4ccea391630c59739995: 2
+    - Vector1_040d30376d644b828c8eed1d95a64b0c: 3
+    - Vector1_a189b6eef75042f98a9570d840c1732f: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Color_f9d64cf021454fcda1c7f5b984fe18bf: {r: 1, g: 0, b: 0.9957261, a: 0}
+    - Color_3961136567764c40b2f7f6d806b93f4e: {r: 1, g: 0.93442965, b: 0, a: 0}
   m_BuildTextureStacks: []

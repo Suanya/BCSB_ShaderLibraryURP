@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 275818331}
   - component: {fileID: 275818330}
   - component: {fileID: 275818329}
+  - component: {fileID: 275818332}
   m_Layer: 5
   m_Name: ButtonLeft
   m_TagString: Untagged
@@ -315,6 +316,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 978515823}
+        m_TargetAssemblyTypeName: ParticleMenu, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &275818330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +366,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275818327}
   m_CullTransparentMesh: 1
+--- !u!82 &275818332
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275818327}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 54bcf6a5292ce4272bd93e41de81a19e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &296153490
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,8 +931,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleSystems:
-  - title: Fresnel Outside Glow
-    description: 
+  - title: Fresnel
+    description: Outside Glow
     isWeaponEffect: 0
     particleSystemGO: {fileID: 5948304480316135285, guid: 6e5c1716550e64d2fb233e086306e9f0,
       type: 3}
@@ -836,11 +945,67 @@ MonoBehaviour:
       type: 3}
     particlePosition: {x: 0, y: 0, z: 0}
     particleRotation: {x: 0, y: 0, z: 0}
-  gunGameObject: {fileID: 1547811597}
+  - title: Fresnel Time
+    description: Remap
+    isWeaponEffect: 0
+    particleSystemGO: {fileID: 6186622729156401681, guid: 774a2e6914eca4e649774d75935bfc43,
+      type: 3}
+    particlePosition: {x: 0, y: 0, z: 0}
+    particleRotation: {x: 0, y: 0, z: 0}
+  - title: Fresnel Time
+    description: Color Switch
+    isWeaponEffect: 0
+    particleSystemGO: {fileID: 5136512469864577705, guid: 495ab15eea4c74c8a8da567e98fccd76,
+      type: 3}
+    particlePosition: {x: 0, y: 0, z: 0}
+    particleRotation: {x: 0, y: 0, z: 0}
+  - title: Vertex Bounce
+    description: Position
+    isWeaponEffect: 0
+    particleSystemGO: {fileID: 4528594723449546992, guid: 2c5e8ace445b34f0eba164cce0959c3e,
+      type: 3}
+    particlePosition: {x: 0, y: 0, z: 0}
+    particleRotation: {x: 0, y: 0, z: 0}
+  - title: Vertex
+    description: Position
+    isWeaponEffect: 0
+    particleSystemGO: {fileID: 5630828422487936621, guid: 33cdfec1848b7448db4bc194132fc32b,
+      type: 3}
+    particlePosition: {x: 0, y: 0, z: 0}
+    particleRotation: {x: 0, y: 0, z: 0}
+  - title: Vertex Blow Up
+    description: Oversize
+    isWeaponEffect: 0
+    particleSystemGO: {fileID: 6440516204190947681, guid: 4690222b5c4f24f2c89af2e9d1d670de,
+      type: 3}
+    particlePosition: {x: 0, y: 0, z: 0}
+    particleRotation: {x: 0, y: 0, z: 0}
+  - title: Vertex Simple Noise
+    description: Deformation
+    isWeaponEffect: 0
+    particleSystemGO: {fileID: 963257081248121772, guid: 4a37f3971fc3544dbac1c3ce0ccfa112,
+      type: 3}
+    particlePosition: {x: 0, y: 0, z: 0}
+    particleRotation: {x: 0, y: 0, z: 0}
+  - title: Vertex Wobble
+    description: Bummer! No more cube!
+    isWeaponEffect: 0
+    particleSystemGO: {fileID: 150529491388981037, guid: b712b9a00417048c9ab9bab5527b5c9e,
+      type: 3}
+    particlePosition: {x: 0, y: 0, z: 0}
+    particleRotation: {x: 0, y: 0, z: 0}
+  - title: Wonderful Cube
+    description: What a wonderful cube!
+    isWeaponEffect: 0
+    particleSystemGO: {fileID: 726866839586082467, guid: ac8745324a3f24730b8266232992b7ad,
+      type: 3}
+    particlePosition: {x: 0, y: 0, z: 0}
+    particleRotation: {x: 0, y: 0, z: 0}
   spawnLocation: {fileID: 1562416774}
   title: {fileID: 1385382695}
   description: {fileID: 190732357}
   navigationDetails: {fileID: 1227804492}
+  clickSound: {fileID: 275818332}
 --- !u!114 &978515824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2066,6 +2231,7 @@ GameObject:
   - component: {fileID: 1897646540}
   - component: {fileID: 1897646539}
   - component: {fileID: 1897646538}
+  - component: {fileID: 1897646541}
   m_Layer: 5
   m_Name: ButtonRight
   m_TagString: Untagged
@@ -2150,6 +2316,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 978515823}
+        m_TargetAssemblyTypeName: ParticleMenu, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1897646539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,6 +2366,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897646536}
   m_CullTransparentMesh: 1
+--- !u!82 &1897646541
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897646536}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 54bcf6a5292ce4272bd93e41de81a19e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1908232631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2405,77 +2679,77 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &7386034203006277547
+--- !u!1001 &4475082811241565821
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135284, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082466, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135285, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082467, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_Name
-      value: FresnelOutsideGlow
+      value: FreeStyle
       objectReference: {fileID: 0}
-    - target: {fileID: 5948304480316135285, guid: 6e5c1716550e64d2fb233e086306e9f0,
+    - target: {fileID: 726866839586082467, guid: ac8745324a3f24730b8266232992b7ad,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e5c1716550e64d2fb233e086306e9f0, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ac8745324a3f24730b8266232992b7ad, type: 3}

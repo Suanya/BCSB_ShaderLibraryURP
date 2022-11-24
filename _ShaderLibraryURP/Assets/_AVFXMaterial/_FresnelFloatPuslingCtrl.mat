@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: _FresnelFloat
+  m_Name: _FresnelFloatPuslingCtrl
   m_Shader: {fileID: -6465566751694194690, guid: 9febd53b9142a47a89fcb5dfc19ca01e,
     type: 3}
   m_ValidKeywords: []

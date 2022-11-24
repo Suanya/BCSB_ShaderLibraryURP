@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xaxisspin: 0
-  yaxisspin: 0
+  yaxisspin: 1
   zaxisspin: 0
 --- !u!1 &1656661369131401260
 GameObject:
